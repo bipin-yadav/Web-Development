@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>TLP | Author Login </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="tlp"/>
+<link href="css/bootstrap-3.1.1.min.css" rel='stylesheet'/>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="css/style.css" rel='stylesheet'  />
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700'
+	rel='stylesheet'  />
+<link href="css/font-awesome.css" rel="stylesheet" />
+
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Tlp</a>
+			</div>
+			<!--/.navbar-header-->
+			<div class="navbar-collapse collapse"
+				id="bs-example-navbar-collapse-1" style="height: 1px;">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#"><i
+							class="fa fa-user"></i><span>Login</span></a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><i class="fa fa-list"></i><span>Courses</span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Courses list</a></li>
+						</ul></li>
+					
+				</ul> 
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<!--/.navbar-collapse-->
+	</nav>
+	<nav class="navbar nav_bottom" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header nav_2">
+				<button type="button" class="navbar-toggle collapsed navbar-toggle1"
+					data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+				<ul class="nav navbar-nav nav_1">
+					<li><a href="/">Home</a></li>
+					<li class="dropdown mega-dropdown active"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">TLP Library<span
+							class="caret"></span></a>
+						<div class="dropdown-menu mega-dropdown-menu">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li class="active"><a href="history" role="tab"
+									data-toggle="tab">History</a></li>
+								<li><a href="#" role="tab" data-toggle="tab">Geography</a></li>
+							</ul>							
+							
+						</div>
+						</li>
+					<li><a href="/history">History</a></li>
+					<li >
+					<span id="google_translate_element">
+								<script type="text/javascript">
+									function googleTranslateElementInit() {
+										new google.translate.TranslateElement(
+												{
+													pageLanguage : 'en',
+													includedLanguages : 'en,hi',
+													layout : google.translate.TranslateElement.InlineLayout.HORIZONTAL
+												}, 'google_translate_element');
+									}
+								</script>
+								<script type="text/javascript"
+									src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+								</script> 
+								<!-- <script type="text/javascript"
+									src="js/googleTranslate.js">
+								</script> -->
+						</span>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<!-- banner -->
+	<div class="bg">
+		<div class="container">
+			
+			<div class="newsletter">
+				<form>
+					<input type="text" name="ne" size="30" required=""
+						placeholder="Search learning materials here..."/> <input type="submit"
+						value="Search"/>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	
+	<div class="courses_box1">
+	   <div class="container">
+	   	  <form class="login" role="form" th:action="@{/login}" th:object="${ab}" method="post">
+	    	<p class="lead">Welcome Back!</p>
+		    <div class="form-group">
+			    <input autocomplete="off" type="text" name="userid" th:field="*{userid}" class="required form-control" placeholder="Username"/>
+		    </div>
+		    <div class="form-group">
+			    <input autocomplete="off" type="password" class="password required form-control" placeholder="Password" name="password" th:field="*{password}"/>
+		    </div>
+		    <div class="form-group">
+		    	<input type="checkbox" name="remember" value="true"/> Remember Me
+		    	<input type="submit" class="btn btn-primary btn-lg1 btn-block" name="submit" value="Log In"/>
+		    </div>
+	        <p>Don not have an account? <a href="#" title="Sign Up">Sign Up</a></p>
+		 </form>
+	   </div>
+	</div>
+	
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 grid_4">
+				<h3>Quick Links</h3>
+				<ul class="footer_list">
+					<li><a href="#">Services </a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">About usN</a></li>
+					<li><a href="#">Team</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 grid_4">
+				<h3>Extra Links</h3>
+				<ul class="footer_list">
+					<li><a href="#">Forum </a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Shared</a></li>
+					<li><a href="#">Question Answers</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 grid_4">
+				<h3>Contact Us</h3>
+				<address>
+					<strong>Contrary to popular belief</strong> <br/> <span>4877
+						It is a long established</span> <br/>
+					<br/> <span>Contrary to popular , 15089</span> <br/> <abbr>Telephone
+						: </abbr> +1 (734) 123-4567 <br/> <abbr>Email : </abbr> <a
+						href="/home">info(at)Learn.com</a>
+				</address>
+			</div>
+			<div class="col-md-3 grid_4">
+				<h3>Working Hours</h3>
+				<table class="table_working_hours">
+					<tbody>
+						<tr class="opened_1">
+							<td class="day_label">monday</td>
+							<td class="day_value">9:30 am - 6.00 pm</td>
+						</tr>
+						<tr class="closed">
+							<td class="day_label">sunday</td>
+							<td class="day_value closed"><span>Closed</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="clearfix"></div>
+			<div class="copy">
+				<p>
+					Copyright © 2015 Learn . All Rights Reserved | Powered by <a
+						href="#" target="_blank">Trending Developers</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	 
+	<script src="js/script.js"></script>
+	
+</body>
+</html>

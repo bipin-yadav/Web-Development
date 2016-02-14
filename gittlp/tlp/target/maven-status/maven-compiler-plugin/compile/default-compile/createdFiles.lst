@@ -1,0 +1,6 @@
+org\tlp\home\WebController.class
+org\tlp\home\Application.class
+org\tlp\home\SmartFilter$SyntheticResponse.class
+org\tlp\home\SimpleCORSFilter.class
+org\tlp\home\SmartFilter$SyntheticRequest.class
+org\tlp\home\SmartFilter.class
